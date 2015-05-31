@@ -30,3 +30,7 @@ Dim WshShell
 Set WshShell = WScript.CreateObject ("WScript.Shell")
 WshShell.Run "C:\xampp\apache\bin\httpd.exe", 0, True 
 WshShell = Nothing
+
+WScript.Sleep 4000
+
+WScript.Quit
