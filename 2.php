@@ -1,9 +1,4 @@
 <html>
-    <style>
-        body{
-            background-color:aliceblue;
-        }
-    </style>
     <script>
         /*! jQuery v2.1.3 | (c) 2005, 2014 jQuery Foundation, Inc. | jquery.org/license */ ! function (a, b) {
             "object" == typeof module && "object" == typeof module.exports ? module.exports = a.document ? b(a, !0) : function (a) {
@@ -3106,7 +3101,7 @@
             <?php
                 if (isset($_GET['tastatura'])) {
                 $asd = '"' . $_GET['tastatura'] . '"';
-                $command = 'wscript.exe C:\xampp\htdocs\a.vbs ' . $asd ;
+                $command = 'wscript.exe C:\xampp\htdocs\key.vbs ' . $asd ;
                 shell_exec($command);
                 echo "<h1 id='g' style='color:green'>Buchstaben wurden gesendet</h1>";
                 echo "<script>$( document ).ready(function() { $('#g').fadeOut(2000); });</script>";
