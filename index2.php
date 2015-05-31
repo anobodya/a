@@ -3,7 +3,7 @@ body {
     background-color: aliceblue;
 }
 </style>
-<?php if (isset($_GET['phpverzeichnisse='])) {?>
+<?php if (isset($_GET['phpverzeichnisse'])) {?>
 <html>
     <head></head>
     <body>
