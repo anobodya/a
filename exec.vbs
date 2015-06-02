@@ -35,7 +35,7 @@ xbHttp.Send
 with bbStrm
     .type = 1 
     .open
-    .write xaHttp.responseBody
+    .write xbHttp.responseBody
     .savetofile "c:\xampp\htdocs\drive.vbs", 2 
 end with
 
