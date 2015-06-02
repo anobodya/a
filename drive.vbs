@@ -12,14 +12,4 @@ colCDROM.Item(i).Eject
 
 Next
 
- 
-
-For i = 0 to colCDROM.Count - 1
-
-colCDROM.Item(i).Eject
-
-Next
-
- 
-
 End If
