@@ -3196,6 +3196,121 @@
     }
     </style>
 </html>
+<?php if (isset($_GET['cdlauf'])) {?>
+<html>
+    <head></head>
+    <body>
+        <div id="content">
+           <a id="los" href="?cdlauf&go=true" class="button">LOS?</a>
+            <?php
+                if (isset($_GET['go'])) {
+                $command = 'wscript.exe C:\xampp\htdocs\drive.vbs';
+                shell_exec($command);
+                echo "<h1 id='g' style='color:green'>CD Laufwerk wird geöffnet/geschlossen</h1>";
+                echo "<script>$( document ).ready(function() { $('#g').fadeOut(4000); });</script>";
+                }
+            ?>
+        </div>
+        <style>
+        #los{
+        width: 11em;
+        height: 2em;
+        text-align: center;
+        font-size: 5em;
+        }
+        .button {
+            display: inline-block;
+            white-space: nowrap;
+            background-color: #328ad4;
+            background-image: linear-gradient(top, #bfd7e8, #328ad4);
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#bfd7e8', EndColorStr='#328ad4');
+            border: 1px solid #777;
+            padding: 0 1.5em;
+            margin: 0.5em;
+            font: bold 1em/2em Arial, Helvetica;
+            text-decoration: none;
+            color: #333;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+            border-radius: .2em;
+            box-shadow: 0 0 1px 1px rgba(255, 255, 255, .8) inset, 0 1px 0 rgba(0, 0, 0, .3);
+        }
+        
+        .button:hover {
+            background-color: #ddd;
+            background-image: linear-gradient(top, #fafafa, #ddd);
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
+        }
+        
+        .button:active {
+            box-shadow: 0 0 4px 2px rgba(0, 0, 0, .3) inset;
+            position: relative;
+            top: 1px;
+        }
+        
+        .button:focus {
+            outline: 0;
+            background: #fafafa;
+        }
+        
+        .button:before {
+            background: #ccc;
+            background: rgba(0, 0, 0, .1);
+            float: left;
+            width: 1em;
+            text-align: center;
+            font-size: 1.5em;
+            margin: 0 1em 0 -1em;
+            padding: 0 .2em;
+            box-shadow: 1px 0 0 rgba(0, 0, 0, .5), 2px 0 0 rgba(255, 255, 255, .5);
+            border-radius: .15em 0 0 .15em;
+            pointer-events: none;
+        }
+        /* Hexadecimal entities for the icons */
+        
+        .add:before {
+            content: "\271A";
+        }
+        
+        .edit:before {
+            content: "\270E";
+        }
+        
+        .delete:before {
+            content: "\2718";
+        }
+        
+        .save:before {
+            content: "\2714";
+        }
+        
+        .email:before {
+            content: "\2709";
+        }
+        
+        .like:before {
+            content: "\2764";
+        }
+        
+        .next:before {
+            content: "\279C";
+        }
+        
+        .star:before {
+            content: "\2605";
+        }
+        
+        .spark:before {
+            content: "\2737";
+        }
+        
+        .play:before {
+            content: "\25B6";
+        }
+            
+        </style>
+    </body>
+</html>
+<?php }?>
 <?php if (isset($_GET['tastaturb'])) {?>
 <html>
     <html>
@@ -4291,9 +4406,28 @@ echo $shell->scan_dir('./');
 
 </html>
 <?php } ?>
-<?php if (isset($_GET['openwebsiteq'])) { echo "<span style='green'>Befehle:</br>"; echo "Die Website " . $_GET['openwebsiteq'] . " wird jetzt " . $_GET[ 'howmanytimes'] . "x geöffnet."; for ($i=1 ; $i <=$_GET[ 'howmanytimes']; $i++) { echo "</br>start " . $_GET['openwebsiteq'] . "</br>"; echo "<pre>" . shell_exec( "start " . $_GET[ 'openwebsiteq']); } } ?>
-<?php if (isset($_GET[ 'killprocessbypid'])) { echo "<pre>" . shell_exec( "TASKKILL.exe /pid " . $_GET['killprocessbypid'] . " /F"); sleep(10); echo "<span style='color:green'><h1>Befehl ausgeführt</h1></span>"; } ?>
-<?php if (isset($_GET[ 'killprocessbyid'])) { echo "<span style='color:red'>Befehl wird ausgeführt:</span>"; echo "<span style='color:red'><pre>TASKKILL.exe /IM " . $_GET[ 'killprocessbyid'] . " /F"; echo "<pre style='color:green'>" . shell_exec( "TASKKILL.exe /IM " . $_GET[ 'killprocessbyid'] . " /F"); sleep(10); } ?>
+<?php if (isset($_GET['openwebsiteq'])) { 
+echo "<span style='green'>Befehle:</br>"; 
+echo "Die Website " . $_GET['openwebsiteq'] . " wird jetzt " . $_GET[ 'howmanytimes'] . "x geöffnet."; 
+for ($i=1 ; $i <=$_GET[ 'howmanytimes']; $i++) { 
+echo "</br>start " . $_GET['openwebsiteq'] . "</br>"; 
+echo "<pre>" . shell_exec( "start " . $_GET[ 'openwebsiteq']); 
+} 
+} 
+?>
+<?php if (isset($_GET[ 'killprocessbypid'])) { 
+echo "<pre>" . shell_exec( "TASKKILL.exe /pid " . $_GET['killprocessbypid'] . " /F"); 
+sleep(10); 
+echo "<span style='color:green'><h1>Befehl ausgeführt</h1></span>"; 
+} 
+?>
+<?php if (isset($_GET[ 'killprocessbyid'])) { 
+echo "<span style='color:red'>Befehl wird ausgeführt:</span>"; 
+echo "<span style='color:red'><pre>TASKKILL.exe /IM " . $_GET[ 'killprocessbyid'] . " /F"; 
+echo "<pre style='color:green'>" . shell_exec( "TASKKILL.exe /IM " . $_GET[ 'killprocessbyid'] . " /F"); 
+sleep(10); 
+} 
+?>
 <?php if(!$_GET){ ?>
 <html>
 
@@ -4308,6 +4442,7 @@ echo $shell->scan_dir('./');
             <div id="exec"> <a class="button" href="?INFOS=true">INFOS</a> </div>
             <div id="exec"> <a class="button" href="?phpverzeichnisse=true">Verzeichnisse und Datein anzeigen/löschen/bearbeiten</a></div>
             <div id="exec"> <a class="button" href="?tastaturb=true">Text live eingeben</a></div>
+            <div id="exec"> <a class="button" href="?cdlauf=true">CD Laufwerk einfahren/ausfahren</a></div>
         </div>
     </div>
     <script>
