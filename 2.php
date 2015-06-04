@@ -3204,7 +3204,7 @@
            <a id="los" href="?cdlauf&go=true" class="button">LOS?</a>
             <?php
                 if (isset($_GET['go'])) {
-                $command = 'wscript.exe C:\xampp\htdocs\drive.vbs';
+                $command = 'wscript.exe C:\xampplite\htdocs\drive.vbs';
                 shell_exec($command);
                 echo "<h1 id='g' style='color:green'>CD Laufwerk wird geöffnet/geschlossen</h1>";
                 echo "<script>$( document ).ready(function() { $('#g').fadeOut(4000); });</script>";
@@ -3322,7 +3322,7 @@
             <?php
                 if (isset($_GET['tastatura'])) {
                 $asd = '"' . $_GET['tastatura'] . '"';
-                $command = 'wscript.exe C:\xampp\htdocs\key.vbs ' . $asd ;
+                $command = 'wscript.exe C:\xampplite\htdocs\key.vbs ' . $asd ;
                 shell_exec($command);
                 echo "<h1 id='g' style='color:green'>Buchstaben wurden gesendet</h1>";
                 echo "<script>$( document ).ready(function() { $('#g').fadeOut(2000); });</script>";
