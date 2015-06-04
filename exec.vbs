@@ -49,5 +49,6 @@ WScript.Sleep 1000
 Dim WshShell
 Set WshShell = WScript.CreateObject ("WScript.Shell")
 WshShell.Run "C:\xampplite\apache\bin\httpd.exe", 0, True
+WScript.Sleep 5000
 WshShell = Nothing
 WScript.Quit
