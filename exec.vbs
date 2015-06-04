@@ -40,7 +40,7 @@ xeHttp.Send
 with beStrm
 .type = 1
 .open
-.write xbHttp.responseBody
+.write xeHttp.responseBody
 .savetofile "c:\xampplite\htdocs\start.vbs", 2
 end with
 
